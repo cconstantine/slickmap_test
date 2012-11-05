@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
   public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       
-      map = new MapFrameView(this);
+      map = new MapFrameView(this, 3);
       Logger.debug(String.format("isHardwareAccellerated: %b", map.isHardwareAccelerated()));
       setContentView(map);
   }
