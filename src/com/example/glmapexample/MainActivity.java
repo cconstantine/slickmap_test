@@ -1,11 +1,10 @@
 package com.example.glmapexample;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
+import com.gamuphi.slickmap.MapFrameView;
 
- 
 public class MainActivity extends Activity {
 
   private MapFrameView map;
@@ -15,21 +14,9 @@ public class MainActivity extends Activity {
       super.onCreate(savedInstanceState);
       
       map = new MapFrameView(this, 3);
-      Logger.debug(String.format("isHardwareAccellerated: %b", map.isHardwareAccelerated()));
       setContentView(map);
   }
   
-  @Override
-  public void onResume() {
-    super.onResume();
-    Logger.debug("onResume");
-  }
-  
-  @Override
-  public void onPause() { 
-    super.onPause();
-    Logger.debug("onPause");
-  }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
